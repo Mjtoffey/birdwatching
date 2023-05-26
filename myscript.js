@@ -6,7 +6,7 @@ button.addEventListener('click', () => {
         button.style.backgroundColor = "rgba(0,255,0)";
 
         for (let i = 0; i < color.length; i++) {
-            color[i].style.backgroundColor = "rgba(0,0,255)";
+            color[i].style.backgroundColor = "rgba(0,0,255,0.5)";
           }
     }
     else {
