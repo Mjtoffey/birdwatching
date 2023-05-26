@@ -1,6 +1,19 @@
-var color = ["#222f33e", "#f368e0", "#ee5253", "#0abde3", "#10ac84", "#5f27cd"];
-          var i = 0;
-          document.querySelector("body").addEventListener("click",function(){
-            i = i < color.length ? ++i : 0;
-            document.querySelector("body").style.backgroundColor = color[i]
-          })
+let button = document.getElementById("btn");
+let color = document.getElementsByClassName("color");
+button.addEventListener('click', () => {
+    if (button.textContent === 'Blue') {
+        button.textContent = "Green";
+        button.style.backgroundColor = "rgba(0,255,0)";
+
+        for (let i = 0; i < color.length; i++) {
+            color[i].style.backgroundColor = "rgba(0,0,255)";
+          }
+    }
+    else {
+        button.textContent = 'Blue';
+        button.style.backgroundColor = "rgba(0,0,255)";
+        for (let i = 0; i < color.length; i++) {
+            color[i].style.backgroundColor = "rgba(0,255,0,0.5)";
+        }
+    }
+})
